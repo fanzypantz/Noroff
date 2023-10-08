@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Conscious Coffee Stores">
+        <meta name="keywords" content="stores, conscious coffee, location">
+        <title>Conscious Coffee Stores</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link href="https://fonts.googleapis.com/css?family=Italianno|Montserrat" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <img id="menu" style="display: none;" src="images/menu.svg" alt="mobile menu">
+
+            <div class="logo">
+                <h1>Conscious Coffee</h1>
+            </div>
+
+            <nav id="nav" class="nav">
+                <a class="nav-item" href="index.html">Home</a>
+                <a class="nav-item active" href="">Stores</a>
+                <a class="nav-item" href="about.html">About</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+            </nav>
+
+        </header>
+
+        <div class="slogan">
+            <h2>Conscious Coffee brings you the highest quality blends made with loving care from sustainable sources</h2>
+        </div>
+
+        <section class="info about">
+            <p>So where can you find us?</p>
+            <h2>Coffee Shop Locations</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </section>
+
+        <div class="slogan">
+            <h2>Come visit one of our many coffee shops all over Norway</h2>
+        </div>
+
+        <section class="info">
+            <div class="feature map-feature">
+                <div id="map1" class="map"></div>
+                <p class="address" >Roadaddress 17, 2020 Oslo</p>
+            </div>
+            <div class="feature map-feature">
+                <div id="map2" class="map"></div>
+                <p  class="address">Roadaddress 17, 2020 Oslo</p>
+            </div>
+            <div class="feature map-feature">
+                <div id="map3" class="map"></div>
+                <p class="address">Roadaddress 17, 2020 Oslo</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">Another Link</a>
+                <a href="">Yet Another Link</a>
+                <a href="">This goes somewhere</a>
+            </div>
+
+            <div class="links">
+                <a href="stores.html">Stores</a>
+                <a href="stores.html">Store in Bergen</a>
+                <a href="stores.html">Store in Kristiansand</a>
+                <a href="stores.html">Maybe a store in Mandal</a>
+            </div>
+
+            <div class="links">
+                <a href="about.html">About</a>
+                <a href="about.html">Vision</a>
+                <a href="about.html">Goals</a>
+                <a href="about.html">World Domination</a>
+            </div>
+
+        </footer>
+
+        <script>
+            function initMap() {
+                var oslo = {lat: 59.950, lng: 10.750};
+                var random1 = {lat: 60.950, lng: 10.750};
+                var random2 = {lat: 69.950, lng: 20.750};
+                var map1 = new google.maps.Map(document.getElementById('map1'), {zoom: 4, center: oslo});
+                var marker1 = new google.maps.Marker({position: oslo, map: map1});
+
+                var map2 = new google.maps.Map(document.getElementById('map2'), {zoom: 4, center: random1});
+                var marker2 = new google.maps.Marker({position: random1, map: map2});
+
+                var map3 = new google.maps.Map(document.getElementById('map3'), {zoom: 4, center: random2});
+                var marker3 = new google.maps.Marker({position: random2, map: map3});
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpB6i-UkErVldaaC4c6cGet4plZ9ZSyXA&callback=initMap">
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

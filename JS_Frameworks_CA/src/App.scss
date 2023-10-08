@@ -1,0 +1,42 @@
+
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.pageFade {
+  height: 0;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: height 500ms ease-out;
+}
+
+.pageFade__anim {
+  height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  background-color: #8a97a9;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__navItem {
+  height: 100%;
+  background-color: #4b525d;
+  margin-right: 5px;
+  width: 100px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}

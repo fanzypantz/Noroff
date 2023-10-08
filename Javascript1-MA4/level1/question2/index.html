@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title>JavaScript - MA04 - Question 2</title>
+        <style>
+            body {
+                background-color: #dedede;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            #cards {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: calc(85% / 3);
+                height: 300px;
+                margin: 20px 5px;
+                padding: 10px;
+                background-color: white;
+                border-top: 5px solid darkgreen;
+                border-radius: 0 0 2% 2%;
+                box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .card h2 {
+                color: darkgreen;
+            }
+
+            .card p:first-letter {
+                text-transform: uppercase;
+            }
+
+            .status {
+                width: 100%;
+                text-align: center;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .complete {
+                color: green;
+                background-color: lightgreen;
+            }
+            .incomplete {
+                color: darkred;
+                background-color: lightcoral;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <!-- Create a list of TODO cards using the API -->
+        <div id="cards">
+
+        </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>

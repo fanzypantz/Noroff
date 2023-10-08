@@ -1,0 +1,684 @@
+/* Default Section */
+
+html, body
+  padding: 0
+  margin: 0
+  outline: 0
+
+body
+  overflow-x: hidden !important
+  background: url(/images/tools.jpg) no-repeat 50% fixed / cover
+  font-family: 'Lato', sans-serif
+  color: white
+  font-size: 1.2rem
+  width: 100vw
+
+a, h1, h2, h3, h4, p
+  color: white
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5)
+
+a:hover p, a:hover
+  color: #ababab
+
+input, textarea
+  font-family: 'Lato', sans-serif
+
+h1, h2, h3, h4
+  font-family: 'Parisienne', cursive
+  font-weight: 300
+  font-size: 2.5em
+
+.title
+  font-family: 'Lato', sans-serif
+  text-transform: lowercase
+  font-size: 1.7em
+  margin: 0
+  &:first-letter
+    text-transform: capitalize
+
+.rotated-background
+  width: 110%
+  height: 100%
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-backface-visibility: hidden
+  background-color: $primary-opacity
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5)
+  transform: translate(-50%, -50%) rotate(-5deg)
+  overflow-x: hidden
+  z-index: -10
+
+
+.big-container
+  margin: 20px 0
+  height: 800px
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.mini-container
+  margin: 20px 0
+  height: 75px
+  width: 100%
+  position: relative
+
+.content-level
+  max-width: 1200px
+  display: flex
+  flex-direction: column
+  width: 60%
+  height: 70%
+
+.content
+  -webkit-backface-visibility: inherit
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(-5deg)
+  width: 100%
+
+  h2
+    text-align: center
+
+footer
+  height: 400px
+  background-color: $primary
+
+  .site-map
+    height: 100%
+    width: 60%
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .link-container
+      display: flex
+      flex-direction: column
+      align-items: center
+      height: 45%
+      width: calc(100% / 4)
+
+      a
+        margin: 5px auto
+        text-decoration: none
+        text-align: center
+
+        &:first-child
+          font-size: 1.4em
+          font-family: 'Parisienne', cursive
+          text-decoration: underline
+
+
+
+.nav
+  .nav-element
+    font-family: 'Lato', sans-serif
+    font-size: 1.6em
+    margin: 0
+
+    &:hover
+      color: #ababab
+
+  .horizontal-line
+    height: 12px
+    svg
+      width: 40%
+      margin: 0 auto
+
+header
+  a
+    text-decoration: none
+
+
+
+.search
+  display: flex
+  justify-content: center
+  align-self: center
+
+  #search
+    width: 200px
+    border: 2px solid white
+    color: white
+    background-color: transparent
+    padding-left: 10px
+    border-radius: 8px
+    margin: 0 20px
+
+.social
+  margin-bottom: 40px
+
+  h3
+    margin: 10px auto
+    font-size: 1.2em
+
+.social-icons
+  a
+    margin: 0 5px
+    text-decoration: none
+
+    &:first-child
+      margin-left: 0
+
+.active
+  color: gray
+
+.search
+  #shopping-cart:hover, #search-glass:hover
+    cursor: pointer
+
+
+.header
+  z-index: 100
+  background-color: $primary
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2)
+  width: 100vw
+  height: 75px
+  position: fixed
+  top: 0
+  left: 0
+
+  .logo, .search
+    width: 20%
+
+  .mobile-button
+    position: absolute
+    display: none
+    width: 75px
+    height: 75px
+    top: 0
+    right: 6%
+
+  .header-content
+    width: 85%
+    height: 100%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .nav
+      width: 40%
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+
+      .nav-element
+        font-size: 1.2em
+
+.index-header
+  margin-top: 75px
+  overflow: hidden
+  background-color: $primary-opacity
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5)
+  width: calc(100% + 189px)
+  height: 75vh
+  position: relative
+  transform: translate(-100px, -90px) rotate( -5deg )
+
+  .logo
+    margin-top: 35px
+    margin-bottom: 10px
+
+
+  .header-content
+    display: flex
+    margin: 0
+    padding: 0
+    width: 100vw
+    height: 100vh
+    position: absolute
+    top: 59%
+    left: 50%
+    transform: translate(-50%, -50%) rotate( 5deg )
+    text-align: center
+
+    .header-image
+      position: relative
+      overflow: hidden
+      width: 50%
+      height: 110%
+
+      img
+
+        width: 100%
+        min-height: 100%
+        object-fit: cover
+        object-position: 100% 50%
+
+    .header-text
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      width: 50%
+      height: 85%
+
+.logo
+  text-decoration: underline
+
+
+
+.product-container
+  display: flex
+  justify-content: space-between
+  width: 100%
+  height: 50%
+  max-width: 1200px
+  margin: 0 auto
+
+  .product
+    -webkit-backface-visibility: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    height: 100%
+    width: 100%
+    overflow: hidden
+
+    .text
+      background-color: $primary-opacity45
+      z-index: 10
+      position: absolute
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      text-align: center
+      cursor: pointer
+      transition: background-color 250ms
+
+      &:hover
+        background-color: $primary-opacity
+
+      h3
+        font-size: 1.5em
+        margin: 0
+
+    img
+      //position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: 50% 50%
+
+.vertical-line
+  height: 100%
+  margin: 0 30px
+  svg
+    height: 100%
+    width: 4px
+    filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5))
+
+    line
+      stroke-width: 4px
+      stroke: white
+
+.horizontal-line
+  display: flex
+  justify-content: space-between
+  width: 100%
+  height: 64px
+  max-width: 1200px
+  margin: 0 auto
+
+  .spacer
+    width: 64px
+
+  svg
+    width: calc(100% / 3)
+    height: 100%
+    filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5))
+
+    line
+      stroke-width: 4px
+      stroke: white
+
+.center-text
+  background-color: $primary-opacity45
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: 100%
+
+.dual
+  svg
+    width: 50%
+
+.margin-top-140
+  margin-top: 140px
+
+.two-row
+  -webkit-backface-visibility: hidden
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.history-index
+  height: calc(50% - 32px)
+
+  h2
+    text-decoration: underline
+
+    &:hover
+      color: #ababab
+
+
+  .info
+    width: 45%
+
+  .overlay-image
+    width: 45%
+    height: 100%
+    position: relative
+    overflow: hidden
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: 50% 50%
+
+
+.persona
+  justify-content: center
+  align-items: center
+  .two-row
+    height: 50%
+
+    .info
+      width: calc(50% - 32px)
+      .position
+        margin: 0
+        font-family: 'Parisienne', cursive
+        font-weight: 300
+        font-size: 1.2em
+
+
+    .persona-container
+      width: calc(50% - 32px)
+
+      .persona-img
+        display: block
+        margin: 0 auto
+        width: 350px
+        border-radius: 50%
+
+
+.product-details
+  align-items: center
+  justify-content: space-between
+  width: 60%
+  max-width: 1200px
+  height: 70%
+
+  .breadcrumb
+    align-self: flex-start
+
+    .back:hover
+      cursor: pointer
+
+  .buttons
+    margin-top: auto
+
+    .product-button
+      margin-top: 20px
+      width: 190px
+      height: 40px
+      background-color: transparent
+      color: white
+      border: 2px solid white
+      cursor: pointer
+
+      &:hover
+        background-color: white
+        border: 2px solid white
+        color: $primary
+
+      &:focus
+        border: 2px solid cornflowerblue
+        background-color: transparent
+        color: white
+
+      &:active
+        border: 2px solid gray
+        background-color: $primary
+        color: white
+
+    .add-cart
+      color: black
+      background-color: white
+
+      &:hover
+        color: white
+        border: 2px solid white
+        background-color: transparent
+
+  .product-page
+    width: 100%
+    height: 60%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .product-description
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+    .vertical-line
+      height: 100%
+
+    .sub-title
+      font-size: 0.8em
+      color: #878787
+
+    .size
+      margin-top: auto
+
+    .sizes
+      display: flex
+      flex-wrap: wrap
+
+      .size-container
+        border: 2px solid white
+        width: 42px
+        height: 42px
+        margin: 5px
+
+        &:hover
+          background-color: white
+          cursor: pointer
+
+          p
+            color: black
+
+        p
+          font-size: 12px
+          text-align: center
+          height: 42px
+          line-height: 42px
+
+    .name
+      font-size: 2em
+      margin: 0
+
+    .description
+      font-size: 0.8em
+
+    p
+      margin: 0
+
+    .price
+      margin-top: 20px
+      font-size: 1.4em
+      font-family: 'Parisienne', cursive
+
+    .product-image
+      height: 100%
+      object-fit: cover
+      object-position: 50% 50%
+
+    .product-image, .product-description
+      width: calc(50% - 32px)
+
+.about
+  min-height: 500px
+  -webkit-backface-visibility: hidden
+  justify-content: center
+  align-items: center
+  text-align: center
+
+  .hello
+    color: #B5815A
+
+  .we-are
+    font-size: 2em
+
+  p
+    margin: 0
+    width: 70%
+    font-size: 1.8em
+    font-family: 'Parisienne', cursive
+
+  .about-title
+    font-family: 'Lato', sans-serif
+    margin: 0
+
+.store
+  -webkit-backface-visibility: hidden
+  width: 110%
+  height: 100%
+  position: absolute
+  overflow: hidden
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)  rotate(-5deg)
+
+
+  .img-container
+    width: 100%
+    height: 122%
+    transform: translateY(-90px) rotate(5deg)
+
+  .store-image, .map-image
+    width: 50%
+    height: 100%
+    object-fit: cover
+    object-position: 50% 50%
+
+  .map-image
+    float: right
+
+  .location
+    position: absolute
+    transform-origin: bottom left
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 75px
+    background-color: $primary-opacity
+
+    p
+      font-family: 'Parisienne', cursive
+      font-size: 1.6em
+      margin: 0
+      padding: 0
+      line-height: 75px
+      height: 75px
+      text-align: center
+
+
+.contact
+  -webkit-backface-visibility: hidden
+  flex-direction: row
+  justify-content: center
+  align-items: center
+
+  .contact-info, .contact-form
+    height: 50%
+    width: 55%
+    display: flex
+    flex-direction: column
+
+  input[type="text"]
+    height: 40px
+
+  input[type="button"]
+    height: 40px
+    width: 200px
+    border: 2px solid white
+    background-color: white
+    color: black
+    font-weight: 700
+    font-size: 1.2em
+    font-family: 'Parisienne', cursive
+    align-self: flex-end
+
+    &:hover
+      border: 2px solid white
+      background-color: $primary-opacity
+      color: white
+      cursor: pointer
+
+    &:active
+      background-color: gray
+
+  textarea
+    padding-top: 10px
+    height: 100px
+    resize: none
+
+  .contact-info
+    justify-content: center
+    align-items: flex-start
+
+    h3, p
+      margin: 10px 0
+
+  input[type="text"], textarea
+    padding-left: 10px
+    margin: 10px auto
+    width: calc(100% - 14px)
+    color: white
+    background-color: $primary
+    border: 2px solid white
+
+.about
+  h2
+    margin: 0
+
+  p
+    font-family: 'Lato', sans-serif
+    font-size: 1.2em
+
+.faq-container
+  overflow: visible !important
+
+  .faq-title
+    transition: transform 250ms ease-in-out
+    width: 100%
+
+    .faq-text
+      width: 60%
+      margin: 0 auto
+

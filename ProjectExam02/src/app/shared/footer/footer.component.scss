@@ -1,0 +1,133 @@
+@import '../../../variables';
+
+.footer-container {
+  position: relative;
+  background-color: $main;
+  width: $main-width;
+  max-width: $max-width;
+  margin: 0 auto;
+  height: 260px;
+  z-index: 1;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.footer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $main-shade1;
+  width: 100vw;
+  height: 130px;
+  z-index: -1;
+}
+
+.footer-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 14%;
+  left: 4%;
+}
+
+.footer-item {
+  font-family: $font-family;
+  color: $main-shade2;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.footer-credits {
+  position: absolute;
+  bottom: 14%;
+  left: 4%;
+  font-family: $font-family;
+  font-weight: 100;
+  color: $main-shade2;
+}
+
+.footer-social {
+  position: absolute;
+  bottom: 14%;
+  right: 4%;
+
+  svg {
+    margin: 0 5px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-arrow {
+  position: absolute;
+  top: 14%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    transition: transform 250ms ease;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.footer-bg-small {
+  height: 755px;
+  clip-path: polygon(0 0, 100% 70%, 100% 100%, 0% 100%);
+}
+
+@media (max-width: $breakpoint-big-1) {
+  .footer-container {
+    width: $breakpoint-big-1-width;
+  }
+}
+
+@media (max-width: $breakpoint-big-2) {
+  .footer-container {
+    width: $breakpoint-big-2-width;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .footer-container {
+    width: $breakpoint-big-2-width;
+  }
+
+  .bg-slope {
+    clip-path: polygon(0 0, 100% 24%, 100% 100%, 0% 100%);
+  }
+
+  .footer-nav {
+    left: 8%;
+  }
+
+  .footer-credits {
+    left: 8%;
+  }
+
+  .footer-arrow {
+    right: 7%;
+  }
+
+  .footer-social {
+    bottom: 37%;
+    right: 8%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .footer-container {
+    width: 100%;
+  }
+}

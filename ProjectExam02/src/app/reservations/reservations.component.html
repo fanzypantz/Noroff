@@ -1,0 +1,26 @@
+<div class="big-title page-title">
+  <h1>Your reservations</h1>
+  <div class="big-title-border"></div>
+</div>
+
+<div class="bg-parallelogram"></div>
+
+<div class="reservations-container">
+  <table class="main-table">
+    <tr>
+      <th>Establishment Name</th>
+      <th>Rooms</th>
+      <th>Persons</th>
+      <th>Check-in Date</th>
+      <th>Check-out Date</th>
+    </tr>
+
+    <tr *ngFor="let item of data">
+      <td>{{ item.establishmentName }}</td>
+      <td>{{ item.rooms }}</td>
+      <td>{{ item.persons }}</td>
+      <td>{{ formatDate(item.bookingStart.toDate()) }}</td>
+      <td>{{ formatDate(item.bookingEnd.toDate()) }}</td>
+    </tr>
+  </table>
+</div>

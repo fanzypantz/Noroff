@@ -1,0 +1,45 @@
+1: What is the DOM?
+
+The DOM is an object form of the html presented on the webpage, it's what javascript and other things use to read and
+change the appearance and content of the website. It's an object nested in the same way the html is nested with their elements
+
+2: List three methods to manipulate the DOM.
+
+Lets assume you want to change the color of text in the body as an example
+
+window.document.body.style.color = green // get the document trough the top
+document.body.style.color = green // since the document is in the global scope we can get it directly
+querySelector('body').style.color = green / getElementByTagName('body').style.color = green // examples of searching the DOM to find an element
+
+3: What is an asynchronous call?
+
+asynchronous in itself means something not happening at the same, in other words an asynchronous call could come back at
+any time and the system won't block the rest of the program from running while waiting for the callback to return.
+
+4: Briefly explain what the sources tab in Chromes Developers Tools does.
+
+The sources tab in chrome developer tool is a collection of all the files on the webpage, here you can edit, run and debug your code as you please
+You can also save snippets of javascript you can run anywhere after you created them.
+
+5: What is a JavaScript promise?
+
+A javascript promise is a system for asynchronous actions that work almost like synchronous methods that return a value.
+Like a fetch/then/catch of a json API.
+
+6: What is an API?
+
+An API is a way for programmers to utilize some external software system without needing to implement the underlying algorithms.
+It serves as an interface to the underlying programming making it easier to talk to different systems without recreating said system.
+No need to reinvent the wheel every time.
+
+7: What is a JavaScript Event?
+
+A browser creates event every single time anything happens, when the page loads, then the user clicks something etc.
+Javascript events listen to specific events and runs certain code when these events happen, sometimes blocking the default
+browser action to implement their own javascript version, like form validation as an example.
+
+8: What is event bubbling?
+
+Event bubbling is the propagation of events up the parent tree of the element that fired the first event. It allows you to
+listen to an event on multiple elements in the same branch of the document tree and fire all of them just by clicking a child element.
+The event bubbling happen upwards in the tree from child to parent.

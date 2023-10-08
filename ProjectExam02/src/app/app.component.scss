@@ -1,0 +1,25 @@
+@import '../variables';
+
+app-nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.page-transition-container {
+  z-index: 200;
+  position: fixed;
+  height: 0;
+  width: 100vw;
+  background-color: $main;
+  transition: height 250ms ease;
+}
+
+.page-transition-open {
+  height: 100vh;
+}

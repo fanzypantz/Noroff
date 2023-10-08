@@ -1,0 +1,7 @@
+/node_modules/
+.env
+yarn.lock
+.svg
+.png
+.jpg
+.env.example

@@ -1,0 +1,82 @@
+@import '../../variables';
+
+app-read {
+  position: relative;
+  display: block;
+  //overflow-x: auto;
+}
+
+.admin-debug {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.bg-parallelogram {
+  background-color: $secondary;
+}
+
+.page-title {
+  margin: 80px auto;
+}
+
+.admin-menu {
+  position: relative;
+  width: $main-width;
+  max-width: $max-width;
+  min-width: 1030px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: calc(100% / 5);
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  background-color: $main;
+  border-bottom: 2px solid $main-shade2;
+  color: $main-shade1;
+
+  &:hover {
+    background-color: $secondary;
+    border-bottom: 2px solid $secondary-shade;
+    color: $white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.admin-create-btn {
+  position: absolute;
+  right: 50%;
+  bottom: calc(-100% - 18px);
+  transform: translateX(50%);
+  width: calc((100% / 5) - 8px);
+  height: 40px;
+}
+
+@media (max-width: $breakpoint-admin) {
+  .admin-menu {
+    min-width: unset;
+    width: 80%;
+    flex-wrap: wrap;
+
+    .admin-create-btn {
+      position: unset;
+      transform: unset;
+    }
+
+    .btn {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

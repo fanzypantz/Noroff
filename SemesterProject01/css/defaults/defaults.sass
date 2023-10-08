@@ -1,0 +1,285 @@
+/* Default Section */
+
+html, body
+  padding: 0
+  margin: 0
+  outline: 0
+
+body
+  background-color: $bg
+  font-family: input-sans, sans-serif
+  font-style: normal
+  font-weight: 100
+
+p, h1, h2, h3, h4, h5
+  color: $font
+
+p
+  font-family: $font-family
+  font-weight: 400
+
+a
+  color: $font
+  text-decoration: none
+  font-weight: 700
+
+  &:hover
+    color: $secondary
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+li
+  margin: 0
+  padding: 0
+
+
+.icon
+  position: absolute
+  top: 8%
+  left: 5%
+  width: 50px
+  z-index: 100
+
+header
+  height: $header-height
+  background-color: $bg
+  position: relative
+  //border-bottom: 2px solid $secondary
+
+  #mobile-button
+    position: absolute
+    width: 100px
+    right: 5%
+    top: 5%
+    display: none
+    z-index: 100
+
+  .hero-img
+    width: 100%
+    height: 100%
+    background: url(../images/hero_bg.jpg) no-repeat 50% 10%
+    background-size: cover
+
+  .hero-banner
+    position: absolute
+    top: 60%
+    left: 50%
+    transform: translate(-50%, -60%)
+    margin: 0 auto
+    text-align: center
+    font-weight: 700
+
+    h1, h2
+      text-shadow: $text-shadow
+      margin: 0
+
+    h1
+      font-size: 1.8em
+    h2
+      font-size: 1.4em
+
+  .nav
+    position: absolute
+    top: 20px
+    right: 50%
+    transform: translate(50%, 10%)
+    margin: 0 auto
+    text-align: center
+    font-size: 1.3em
+    z-index: 10
+
+    line
+      stroke: $font
+      stroke-width: 5px
+
+    .nav-list
+      white-space: nowrap
+      padding: 5px
+
+      li
+        display: inline-block
+        margin: 0 20px
+
+        a
+          text-shadow: $text-shadow
+          display: block
+          margin: 0
+          padding: 2px 10px
+
+footer
+  position: relative
+  font-weight: 700
+  font-size: 1.2em
+  background-color: $bg
+  height: $footer-height
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .icon
+    width: 100px
+    top: 25%
+
+  .link-container
+    margin: 80px 40px 0 40px
+    height: 80%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    a
+      font-family: $font-family
+      font-weight: 300
+      font-size: 0.9em
+
+    .nav-link
+      color: $footer-color
+      margin: 3px 0
+
+      &:first-child
+        color: $font
+        font-weight: 700
+
+      &:hover
+        color: $secondary
+
+
+.container
+  //max-width: 1920px
+  width: 100%
+  margin: 0 auto
+
+  p, h1, h2
+    color: $font-secondary
+
+.column
+  display: flex
+
+  height: 300px
+  width: 100%
+
+  .img
+    width: 50%
+
+.text
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 60%
+  margin: 0 auto
+
+  h2
+    color: $secondary
+
+  p
+    font-size: 14px
+    line-height: 1.5em
+    margin: 10px
+
+.text-blob
+  background-color: $font
+  width: 100%
+  text-align: center
+  cursor: pointer
+
+  p
+    font-size: 1.1em
+    color: $font-secondary
+
+  h1
+    font-size: 1.5em
+    color: $secondary
+    border-bottom: $header-border
+
+  .call-to-action
+    width: 80%
+    height: 100%
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+    a
+      width: 230px
+      height: 40px
+      line-height: 40px
+      background-color: $secondary
+      margin: 0 20px
+      border-radius: 5px
+
+      &:hover
+        background-color: $font
+        color: $secondary
+
+.active
+  color: $secondary
+
+.shadow-up
+  box-shadow: 0 -10px 20px 2px rgba(0, 0, 0, 0.4)
+
+.shadow-down
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.4)
+
+.shadow-inset
+  box-shadow: inset 0 0 20px 2px rgba(0, 0, 0, 0.4)
+
+.card-container
+  width: 100%
+  height: 600px
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+  .card
+    box-shadow: 0 15px 5px -10px rgba(0, 0, 0, 0.5)
+    background-color: white
+    margin: 20px
+    width: calc( 100% / 3 )
+    height: 450px
+
+    .card-text
+      width: 80%
+      margin: 0 auto
+      height: calc(100% - 50px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      overflow-x: scroll
+
+      table
+        min-width: 260px
+
+
+    p
+      margin: 10px 0
+      color: $font-secondary
+      //text-shadow: $text-shadow
+
+    h2
+      text-shadow: $text-shadow
+      color: white
+      text-align: center
+      margin: 0
+      line-height: 50px
+      background-color: $secondary
+      box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.4)
+
+.social
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+    margin: 0 20px
+
+  img
+    width: 75px

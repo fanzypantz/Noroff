@@ -1,0 +1,111 @@
+.game {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  position: relative;
+}
+
+.game__backgroundImage {
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.game__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(75, 82, 93, 0.9);
+  color: white;
+  padding: 40px;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.game__cross{
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  filter: invert(1);
+  width: 50px;
+  transition: transform 250ms ease;
+  transform-origin: center;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+.game__cardGenres{
+  display: flex;
+  flex-wrap: wrap;
+
+  p:first-of-type {
+    width: 100%;
+    margin: 0;
+  }
+
+  p:nth-of-type(2) {
+    margin-left: 0 !important;
+  }
+}
+
+.game__platforms{
+  display: flex;
+  flex-wrap: wrap;
+
+  p:first-of-type {
+    width: 100%;
+    margin: 0;
+  }
+
+  p {
+    margin: 0 10px 0 0;
+  }
+
+  img:first-of-type {
+    margin-left: 0 !important;
+  }
+}
+
+.game__platformIcon {
+  height: 40px;
+  margin: 10px !important;
+}
+
+.game__cardGenre {
+  margin: 10px !important;
+  background-color: #8a97a9;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.game__description {
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.game__website-link {
+  display: block;
+  background-color: #8a97a9;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  width: 200px;
+  text-align: center;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: white;
+    color: #4b525d;
+  }
+}

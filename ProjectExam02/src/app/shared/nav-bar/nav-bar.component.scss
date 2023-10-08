@@ -1,0 +1,161 @@
+@import '../../../variables.scss';
+
+.nav-icon {
+  height: 32px;
+  width: 32px;
+  transition: fill 250ms ease;
+  fill: $main-shade2;
+  stroke: $main-shade2;
+}
+
+.nav-container-full {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+
+  transition: opacity 250ms ease;
+}
+
+.nav-container {
+  height: 80px;
+}
+
+.nav-container,
+.nav-user {
+  display: flex;
+}
+
+.nav-item {
+  background-color: $main;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $main-shade2;
+  margin-left: 5px;
+  transition: height, width, background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+
+  h3 {
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $main;
+    background-color: $main-shade2;
+    height: 90px;
+    width: 90px;
+
+    .nav-icon {
+      fill: $main;
+      stroke: $main;
+    }
+  }
+}
+
+.nav-admin {
+  background-color: $main-shade2;
+  color: $main;
+  .nav-icon {
+    fill: $main;
+  }
+
+  &:hover {
+    color: $main-shade2;
+    background-color: $main;
+
+    .nav-icon {
+      fill: $main-shade2;
+    }
+  }
+}
+
+.nav-hideMenu {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hamburger-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+.hamburger-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-open-hamburger {
+  position: fixed;
+}
+
+.nav-mobile-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  //min-height: 100vh;
+  background-color: $secondary;
+  flex-direction: column;
+
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    width: 80%;
+    margin: auto auto 0 auto;
+  }
+
+  .nav-user {
+    width: 80%;
+    margin: 0 auto auto auto;
+  }
+
+  .nav-item {
+    width: calc((80vw / 3) - 18px);
+    height: calc((80vw / 3) - 18px);
+    margin: 0 20px 20px 0;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .user-login {
+    width: 80%;
+    margin: 0 auto;
+
+    .nav-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobileL) {
+  .nav-mobile-container {
+    .nav-item {
+      width: calc((80vw / 2) - 16px);
+      height: calc((80vw / 2) - 16px);
+      margin: 0 20px 20px 0 !important;
+
+      &:nth-of-type(2n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}

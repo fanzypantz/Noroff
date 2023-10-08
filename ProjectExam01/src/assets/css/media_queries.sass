@@ -1,0 +1,585 @@
+/* Media Queries Section */
+
+@media only screen and (max-width: 1606px)
+
+  .rocket-card .rocket-info
+    width: 200px
+
+
+
+@media only screen and (max-width: 1440px) // Large
+  #cores
+    .cores-row, .falcon-cores
+      width: 48%
+
+@media only screen and (max-width: 1348px)
+  .rocket-card
+    left: -10%
+
+  #falcon-heavy-main
+    left: 14% !important
+
+
+
+@media only screen and (max-width: 1024px) // Laptop
+
+  .rocket-card
+    left: -16%
+
+  #falcon-heavy-main
+    left: 10% !important
+
+  #reflight-02
+    left: 38%
+
+  #reflight-03
+    left: -5%
+
+  #reflight-04
+    left: 5%
+
+  #reflight-05
+    left: 23%
+
+  #reflight-06
+    left: 44%
+
+  #reflight-07
+    left: 42%
+
+
+  #first-landing .youtube
+    width: 100%
+
+  #cores
+    .cores-row, .falcon-cores
+      width: 65%
+
+  .slogan
+    width: 60%
+
+  header
+    .nav
+      width: 140px
+
+
+  .link-text h3
+    margin: 0 10px
+    font-size:  20px
+
+@media only screen and (max-width: 926px) // Laptop
+
+  .rocket-card
+    padding: 15px
+    left: -16%
+
+    .rocket-info
+      width: 160px
+
+  #falcon-heavy-main
+    left: 10% !important
+
+
+@media only screen and (max-width: 844px)
+
+  #reflight-02
+    left: 30%
+
+  #reflight-03
+    left: -5%
+
+  #reflight-04
+    left: -12%
+
+  #reflight-05
+    left: 14%
+
+  #reflight-06
+    left: 21%
+
+  #reflight-07
+    left: 26%
+
+@media only screen and (max-width: 768px) // Tablet
+
+  #missions .container-mission .mission-title
+    flex-direction: column
+
+    .container-title
+      width: 100% !important
+
+
+  .rocket-card.main-card
+    display: none
+
+  .rocket-card
+    padding: 20px
+    top: 50% !important
+    left: 50% !important
+    transform: translate(-50%, -50%)
+    .rocket-info
+      width: 250px
+
+  #reflight-gallery
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+    .card
+      width: calc(90% / 3)
+      height:  40%
+      position: static
+      top: unset
+      left: unset
+      transform: unset
+
+      .card-desc
+        width: 260px !important
+        //height: 200px
+        top: 50% !important
+        left: 50%
+        transform: translate(-50%, -50%)
+
+      .link-text
+        width: 300px !important
+        height: 40px
+        top: 30%
+        left: 50%
+        transform: translateX(-50%)
+
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+        object-position: 50% 50%
+
+  #cores
+    .cores-row, .falcon-cores
+      width: 90%
+
+
+  .slogan
+    width: 80%
+
+  header
+    .scrollbar
+      width: 6px
+      opacity: 0.5
+
+    .container-logo
+      left: 50%
+      transform: translateX(-50%)
+
+      svg
+        width: 100%
+
+  .history
+    .hangar
+      margin-top: 0 !important
+
+    .text
+      font-size: 1.2em
+
+    .reflight
+      h3
+        width: 50%
+      svg
+        display: none
+
+  .bg-main
+    width: 100%
+
+  header
+    .mobile-menu
+      display: block
+
+    .nav
+      opacity: 0
+      display: none
+      width: 60vw
+      height: 60vh
+      right: 50%
+      transform: translate(50%, -50%)
+
+      .nav-element
+        align-items: center
+
+  .container-normal
+    width: 90%
+
+  #business .column
+    min-width: auto
+    width: 50%
+    margin: 10px
+
+    img
+      height: 70%
+
+    h1
+      font-size: 2em
+
+
+
+
+  #index-cta
+    img
+      object-position: 50% 50%
+
+    #core-hangar img
+      object-position: 70% 50%
+
+@media only screen and (max-width: 425px) // Mobile Large
+
+  header
+    .nav
+      width: 90vw
+
+  #missions
+    .mission-heading
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin-bottom: 0
+
+      .patch
+        height: 200px
+        transform: unset
+        position: static
+    .mission-payloads
+      margin-left: 15px
+
+    .container-mission
+      .mission-column
+        margin: 15px
+
+
+  .rocket-card
+    padding: 20px
+    top: 50% !important
+    left: 50% !important
+    transform: translate(-50%, -50%)
+    .rocket-info
+      width: 90vw
+
+  #cores .rocket-card
+    //width: 270px
+
+    .rocket-info
+      width: 270px
+
+  .history
+    .reflight
+      margin-top: 0
+    .hangar
+      height: 150px
+    .text
+      font-size: 1em
+
+  #business
+    flex-direction: column
+
+    .column
+      width: 100%
+      margin: 10px 0
+      justify-content: center
+
+      h1
+        margin: 10px 0
+
+      img
+        object-fit: cover
+        object-position: 50% 10%
+        height: 60%
+
+  #index-cta
+    #dragon-space
+      margin: 0
+      height: calc(90% / 3)
+
+    #two-row-dragon
+      flex-direction: column
+      height: calc((90% / 3) * 2)
+
+      #landing, #core-hangar
+        width: 100%
+        height: 50%
+        margin: 0
+
+
+
+@media only screen and (max-width: 375px) // Mobile Medium
+
+  .slogan .text
+    font-size: 1.5em
+
+  .history
+    h2
+      font-size: 1.8em
+      line-height: 25px
+
+    #history
+      width: 85px
+
+    .reflight h3
+      margin: 10px 0
+      font-size: 1.2em
+
+  header
+    .container-logo
+      width: 80%
+      h1
+        font-size: 2.5em
+
+@media only screen and (max-width: 320px) // Mobile Medium
+
+  .history
+    #history
+      margin-left: 0
+
+  #reflight-gallery .card
+    .link-text
+      width: 100vw
+
+    .card-desc
+      width: calc(100vw - 40px)
+
+
+///////////////////////////////
+// HEIGHT RELATED MEDIA QUERIES
+//////////////////////////////
+
+@media only screen and (max-height: 870px)
+
+  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
+    transform: scale(0.8)
+
+  #falcon-9-heavy
+    transform: scale(0.8) translateY(-50px) !important
+
+
+@media only screen and (max-height: 755px)
+
+  #reflight-gallery .card .card-desc
+    top: 42%
+    width: calc(100% - 40px)
+
+  #first-landing .youtube
+    height: 50%
+
+  #cores .cores-row
+    height: 230px
+
+    .core-card
+      height: 100%
+
+  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
+    transform: scale(0.7)
+
+  #falcon-9-heavy
+    transform: scale(0.7) translateY(-70px) !important
+
+  #falcon-1-rocket
+    transform: translateY(60px)
+
+  header .nav
+    height: 90vh
+
+    .nav-element
+      height: calc(100% / 4)
+
+@media only screen and (max-height: 600px)
+
+  .history .hangar
+    margin-top: 0
+    height: 175px
+
+  #reflight-gallery .card
+    height: 46%
+
+  #cores .cores-row
+    height: 170px
+
+  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
+    transform: scale(0.6)
+
+  #falcon-9-heavy
+    transform: scale(0.6) translateY(-70px) !important
+
+  #falcon-1-rocket
+    transform: scale(0.9) translateY(60px)
+
+@media only screen and (max-height: 515px)
+
+  .gallery .description p
+    margin: 0
+
+  .slogan .text
+    font-size: 1em
+
+  .history
+    .hangar
+      margin: 0
+      height: 150px
+
+    .text
+      font-size: 1em
+    .reflight
+      margin: 0
+
+  header .container-logo h1
+    font-size: 2em
+
+
+  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
+    transform: scale(0.5)
+
+  #falcon-9-heavy
+    transform: scale(0.5) translateY(-70px) !important
+
+  #falcon-1-rocket
+    transform: scale(0.8) translateY(60px)
+
+@media only screen and (max-height: 433px)
+
+  .history
+    .hangar
+      height: 100px
+
+    .text
+      line-height: 20px
+
+  #first-landing .youtube
+    height: 80%
+
+  #cores
+    .falcon-cores
+      margin: 10px auto
+    .cores-row
+      height: 140px
+
+  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
+    transform: scale(0.4)
+
+  #falcon-9-heavy
+    transform: scale(0.4) translateY(-70px) !important
+
+  #falcon-1-rocket
+    transform: scale(0.7) translateY(60px)
+
+@media only screen and (max-height: 390px)
+
+  .gallery
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .images
+      width: 80%
+      height: 50%
+      position: static
+      left: unset
+      top: unset
+      transform: unset
+
+      .image
+        display: none
+        position: static
+        top: unset
+        left: unset
+
+      #img-05
+        width: 100%
+        height: 100%
+        display: block
+        transform: unset
+
+    .description
+      position: static
+      right: unset
+      top: unset
+      bottom: unset
+      width: 80%
+      transform: unset
+
+      .container-gallery-text
+        width: 100%
+
+        .line
+          display: none
+
+  .history
+    h2
+      font-size: 1.5em
+      line-height: 25px
+
+    #history
+      width: 77px
+
+    .reflight h3
+      font-size: 1em
+
+@media only screen and (max-height: 343px)
+
+  .gallery .description .container-gallery-text .text
+    margin: 0 0 0 40px
+
+  header .nav
+    height: 100vh
+    .nav-element p, header .nav .nav-element h2
+      margin: 2px 2px 2px 10px
+
+  .history
+    #history
+      width: 70px
+
+    h2
+      font-size: 1.2em
+
+  #business
+    .column
+      height: 20% !important
+      img
+        display: none
+
+  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
+    transform: scale(0.3)
+
+  #falcon-9-heavy
+    transform: scale(0.3) translateY(-70px) !important
+
+  #falcon-1-rocket
+    transform: scale(0.6) translateY(60px)
+
+@media only screen and (min-width: 425px) and (max-height: 800px)
+  #business .column
+    height: 600px
+    margin: 0 50px
+
+@media only screen and (min-width: 425px) and (max-height: 725px)
+  #business .column
+    height: 550px
+    margin: 0 50px
+
+@media only screen and (min-width: 425px) and (max-height: 600px)
+  .gallery .description .container-gallery-text .text
+    font-size: 0.6em
+
+  #business .column
+    height: 400px
+
+@media only screen and (min-width: 425px) and (max-height: 420px)
+  .gallery .description p
+    margin: 5px 0
+
+
+  #business .column
+    height: 300px
+
+    img
+      height: 50%
+    h1
+      font-size: 2em
+

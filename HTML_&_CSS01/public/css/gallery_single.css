@@ -1,0 +1,13 @@
+.image-container {
+    width: 100%;
+}
+
+.portfolio-thumb {
+    height: auto;
+}
+
+.image-container h2,
+.image-container p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

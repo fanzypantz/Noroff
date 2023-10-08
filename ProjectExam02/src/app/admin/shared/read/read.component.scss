@@ -1,0 +1,102 @@
+@import '../../../../variables';
+
+app-admin {
+  position: relative;
+}
+
+.admin-read-icon {
+  width: 25px;
+  margin: 0 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+app-images {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.admin-confirm-delete {
+  background-color: $main-transparent;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  opacity: 0;
+  transform-origin: center;
+  animation: fade-in 0.5s ease-in-out both;
+
+  .btn {
+    width: 230px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.admin-read {
+  width: 60%;
+  min-width: 1030px;
+  min-height: 500px;
+  margin: 0 auto 590px auto;
+
+  .bg-parallelogram {
+    background-color: $secondary;
+  }
+}
+
+.admin-pagination {
+  width: 100%;
+  max-width: $max-width;
+  min-width: 1030px;
+
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+
+  .btn {
+    background-color: $main-shade2;
+    border-bottom: 2px solid $main;
+    color: $main;
+    width: calc((100% / 5) - 10px);
+    height: 40px;
+    line-height: 40px;
+
+    &:hover {
+      background-color: $main;
+      border-bottom: 2px solid $main-shade2;
+      color: $white;
+    }
+  }
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
+@media (max-width: $breakpoint-admin) {
+  .admin-read {
+    overflow-x: auto;
+    width: 100vw;
+    min-width: unset;
+  }
+}

@@ -1,0 +1,597 @@
+/* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+
+app-root {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: block;
+  min-height: 100vh;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-text;
+}
+
+app-footer {
+  display: block;
+  position: absolute;
+  margin-top: 300px;
+  height: 260px;
+  bottom: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family;
+}
+
+h4 {
+  color: $secondary-shade;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $white;
+  }
+}
+
+app-booking-search {
+  position: absolute;
+  width: $main-width;
+  max-width: $max-width;
+  height: 60px;
+  background-color: $main-shade2;
+  z-index: 10;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  font-family: $font-family;
+  font-size: 1em;
+  width: 100%;
+  height: 30px;
+  background-color: $tertiary;
+  border: none;
+  border-bottom: 2px solid $tertiary-shade;
+  text-transform: uppercase;
+  color: $white;
+  transition: transform, background-color, border-bottom-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: $secondary;
+    border-bottom-color: $secondary-shade;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.bg-parallelogram {
+  position: absolute;
+  top: 530px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  width: 105vw;
+  height: 43vw;
+  background-color: $main-shade2;
+  clip-path: polygon(17% 38%, 100% 0, 83% 62%, 0 100%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bg-parallelogram-mobile {
+  height: 60vw;
+  clip-path: polygon(10% 38%, 100% 0, 90% 62%, 0 100%);
+}
+
+.bg-trapezoid {
+  position: absolute;
+  top: -35%;
+  right: calc(-20vw);
+  z-index: -11;
+  width: 50vw;
+  height: 43vw;
+  background-color: $main;
+  clip-path: polygon(12% 8%, 100% 0, 100% 100%, -3% 92%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bg-slope {
+  z-index: -12;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 1700px;
+  background-color: $secondary;
+  clip-path: polygon(0 0, 100% 34%, 100% 100%, 0% 100%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bg-main {
+  background-color: $main;
+}
+
+.big-title {
+  margin: 70px auto;
+  position: relative;
+  width: 380px;
+  height: 80px;
+
+  h1 {
+    line-height: 80px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.big-title-border {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  border-top: 1px solid $main;
+  border-bottom: 1px solid $main;
+  transform: translate(-50%, -50%);
+}
+
+.page-title {
+  margin: 80px auto 200px auto;
+  width: fit-content;
+  height: 70px;
+
+  h1 {
+    display: inline-block;
+    line-height: 70px;
+    font-size: 3.4em;
+    margin: 0;
+    color: $main;
+  }
+}
+
+.form-input {
+  font-family: $font-family;
+  width: calc(100% - 70px);
+  background-color: $main-shade2;
+  border: none;
+  padding-left: 10px;
+  color: $main;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::placeholder {
+    color: $main;
+  }
+}
+
+.form-input-text {
+  width: 100%;
+  background-color: $main-shade2;
+  color: $main;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  height: 150px;
+  max-height: 150px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::placeholder {
+    color: $main;
+  }
+}
+
+.form-input-label {
+  font-family: $font-family;
+  display: block;
+  height: 50px;
+  width: calc(100% - 20px);
+  line-height: 50px;
+  padding-left: 20px;
+  background-color: $main-shade2;
+  color: $main;
+  font-size: 0.9em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-input-p {
+  font-size: 16px;
+}
+
+.form-input-files {
+  display: none;
+}
+
+.form-input-boolean {
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  border-radius: 0;
+  background-color: $main-shade2;
+}
+
+// Source https://css-tricks.com/the-checkbox-hack/
+.form-input-switch {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: $main-shade2;
+
+  input {
+    display: none;
+  }
+}
+
+.form-input-switch-toggle {
+  position: absolute;
+  display: block;
+  background-color: $main-shade1;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 0;
+  transform: translate(5px, -50%);
+  transition: background-color, width, left, transform;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    width: 50px;
+  }
+}
+
+.form-input-switch input:checked ~ .form-input-switch-toggle {
+  background-color: $main;
+  transform: translate(-100%, -50%);
+  left: calc(100% - 5px);
+}
+
+.form-input-invalid {
+  border: 2px solid $tertiary;
+  width: calc(100% - 72px);
+  height: calc(100% - 4px);
+  padding-left: 8px;
+}
+
+.form-date::-webkit-inner-spin-button,
+.form-date::-webkit-outer-spin-button,
+.form-date::-webkit-clear-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-date::-webkit-calendar-picker-indicator {
+  color: $main;
+
+  &:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.form-overbox {
+  position: absolute;
+  top: 0;
+  transform: translateY(calc(-100% - 10px));
+  left: 60px;
+  min-height: 40px;
+  width: calc(100% - 70px);
+  background-color: $main;
+  color: $white;
+  padding-left: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+  border-bottom: 2px solid $main-shade2;
+
+  h3 {
+    margin: 0;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
+
+.form-overbox-left {
+  left: 0;
+}
+
+.form-overbox-right {
+  left: unset;
+  right: 0;
+}
+
+.form-error {
+  opacity: 1;
+  background-color: $tertiary-shade;
+  width: max-content;
+  padding: 0 10px;
+}
+
+.form-overbox-checkout {
+  left: 0;
+}
+
+.form-underbox {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% + 10px));
+  left: 60px;
+  width: calc(100% - 60px);
+  max-height: 305px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-underbox-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.form-underbox-item {
+  padding-left: 10px;
+  background-color: $main;
+  border-bottom: 2px solid $main-shade2;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 2px;
+
+  a {
+    line-height: 30px;
+    margin: 0;
+    color: $white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $main-shade2;
+
+    a {
+      color: $main;
+    }
+  }
+}
+
+.contact-form-container {
+  background-color: $white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-display {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.main-table {
+  width: 100%;
+  max-width: $max-width;
+  min-width: 1030px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+
+  tr {
+    width: 100%;
+    height: 55px;
+    color: $main;
+    background-color: $main-shade2;
+    margin-bottom: 5px;
+
+    svg {
+      fill: $main;
+    }
+
+    &:nth-of-type(even) {
+      background-color: $main;
+      color: $white;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  td,
+  th {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fr-toolbar,
+.second-toolbar {
+  border-radius: 0 !important;
+}
+
+@media (max-width: $breakpoint-big-1) {
+  app-booking-search {
+    width: $breakpoint-big-1-width;
+  }
+
+  .bg-parallelogram {
+    top: 500px;
+  }
+}
+
+@media (max-width: $breakpoint-big-2) {
+  app-booking-search {
+    width: $breakpoint-big-2-width;
+  }
+
+  .bg-parallelogram {
+    top: 430px;
+  }
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .bg-parallelogram {
+    top: 330px;
+  }
+}
+@media (max-width: $breakpoint-tablet) {
+  .bg-parallelogram {
+    width: 130vw;
+    height: 50vw;
+  }
+}

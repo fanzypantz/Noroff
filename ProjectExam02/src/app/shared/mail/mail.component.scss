@@ -1,0 +1,72 @@
+@import '../../../variables';
+
+.contact-form {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+
+  .btn {
+    height: 40px;
+  }
+}
+
+.contact-form-title {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: $tertiary;
+}
+
+.contact-form-input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  .form-overbox {
+    left: 0;
+  }
+
+  label {
+    color: $main;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+
+  .form-input {
+    width: calc(100% - 66px);
+    height: 52px;
+  }
+}
+
+.contact-form-input-icon {
+  height: 54px;
+  width: 54px;
+  position: relative;
+  background-color: $secondary;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    line {
+      stroke: $white;
+    }
+  }
+}
+
+.btn-close {
+  margin-top: 15px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .contact-form {
+    width: 90%;
+  }
+}

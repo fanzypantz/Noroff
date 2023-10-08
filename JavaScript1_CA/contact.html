@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Game</title>
+
+
+    <!-- Boostrap style sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"> <h1><i class="fa fa-gamepad" aria-hidden="true"></i> Card Game</h1></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+              </ul>  
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Contact us Form</h2>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-sm-12">
+            <br>Name: <br>
+            <input type="text" name="firstName" id="firstName">
+            <span class="error" id="firstNameError">This field cannot be blank</span>
+        </div>
+        <div class="col-sm-12">
+            <br>Last Name: <br>
+            <input type="text" name="lastName" id="lastName">
+            <span class="error" id="lastNameError">This field cannot be blank</span>
+        </div>
+        <div class="col-sm-12">
+            <br>Telephone: <br>
+            <input type="text" name="phone" id="phone">
+            <span class="error" id="phoneError">Please enter a correct phone number</span>
+        </div>
+        <div class="col-sm-12">
+            <br>Email: <br>
+            <input type="text" name="email" id="email">
+            <span class="error" id="emailError">Please enter a correct email address</span>
+        </div>
+        <div class="col-sm-12">
+            <button type="submit" id="submitContact" class="m-t-30">Submit <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Noroff
+</footer>
+<script src="scripts/contact.js"></script>
+</body>
+</html>

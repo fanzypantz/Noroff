@@ -1,0 +1,165 @@
+/* Rockets Section */
+
+#header-rockets
+  background: url(../images/header03.jpg) no-repeat center center
+  background-size: cover
+
+#falcon-9
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .rocket
+    position: relative
+    margin: 0 20px
+    height: 830px
+
+    .landing-legs
+      z-index: 4
+      position: absolute
+      bottom: 4.5%
+      left: 50%
+      transform: translateX(-50%)
+
+    .engines
+      z-index: 2
+      transform: translateY(-15px)
+
+  #falcon-9-dragon
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+
+    #falcon-9-dragon-capsule
+      transform: translateY(5px)
+      z-index: 4
+
+    #falcon-9-dragon-lower
+      z-index: 1
+      transform: translateY(-13px)
+
+    #falcon-9-dragon-upper
+      z-index: 3
+
+
+
+  #falcon-9-sat
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+
+    #falcon-9-sat-third
+      transform: translateY(5px)
+      z-index: 4
+
+    #falcon-9-sat-lower
+      z-index: 2
+      transform: translateY(-13px)
+
+    #falcon-9-sat-upper
+      z-index: 3
+
+  #falcon-9-exp
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+
+    #falcon-9-exp-third
+      transform: translateY(5px)
+      z-index: 4
+
+    #falcon-9-exp-lower
+      z-index: 1
+      transform: translateY(-13px)
+
+    #falcon-9-exp-upper
+      z-index: 3
+
+
+#falcon-heavy
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+  background: url(../images/header05.jpg) no-repeat center center
+  background-size: cover
+
+  #falcon-heavy-main
+    left: 20%
+
+  .rocket
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    transform: translateY(-85px)
+
+  #falcon-heavy-lower
+    z-index: 2
+    transform: scale(2.37) translateY(36px)
+
+  #falcon-heavy-landing
+    z-index: 4
+    transform: scale(2.63) translate(0, 53px)
+    height: 45px
+
+  #falcon-heavy-engine
+    z-index: 3
+    transform: scale(2.39) translateY(76px)
+    height: 10px
+
+  #falcon-heavy-upper
+    z-index: 5
+
+#falcon-1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+
+    .rocket
+      width: 35px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+    #falcon-1-engine
+      transform: translateY(-47px)
+
+.rocket-card
+  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  background-color: black
+  color: white
+  padding: 25px
+  opacity: 0
+  transition: opacity 100ms ease-in-out
+  box-shadow: $box-shadow
+
+  h3
+    margin-top: 0
+
+  .rocket-info
+    display: flex
+    justify-content: space-between
+    width: 300px
+
+    p
+      margin: 0
+
+.main-card
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  opacity: 1
+  transition: opacity 1000ms ease-in-out !important
+  transition-delay: 250ms

@@ -1,0 +1,35 @@
+@import '../../variables';
+
+.bg-parallelogram {
+  background-color: $secondary;
+}
+
+.reservations-container {
+  overflow-x: auto;
+  position: relative;
+  width: $main-width;
+  max-width: $max-width;
+  min-height: 50vh;
+  margin: 0 auto 590px auto;
+}
+
+.page-title {
+  margin: 80px auto;
+}
+
+.main-table {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: $breakpoint-big-1) {
+  .reservations-container {
+    width: $breakpoint-big-1-width;
+  }
+}
+
+@media (max-width: $breakpoint-big-2) {
+  .reservations-container {
+    width: $breakpoint-big-2-width;
+  }
+}

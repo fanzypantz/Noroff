@@ -1,0 +1,53 @@
+@import '../../../variables';
+
+.home-gallery-container {
+  height: 50vh;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.home-gallery-images {
+  width: 400vw;
+  height: 100%;
+  display: flex;
+  transition: transform 1s ease-in-out;
+
+  img {
+    object-fit: cover;
+    width: 100vw;
+  }
+}
+
+.home-gallery-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-gallery-control-line {
+  width: 100px;
+  stroke: $main;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  transition: stroke 1s ease, transform 250ms ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+.home-gallery-control-line-active {
+  stroke: $secondary;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .home-gallery-control {
+    width: $breakpoint-big-2-width;
+    margin: 0 auto;
+  }
+
+  .home-gallery-control-line {
+    width: calc(100% / 4);
+  }
+}

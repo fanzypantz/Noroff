@@ -1,0 +1,237 @@
+@import '../../variables';
+
+agm-map {
+  width: 100%;
+  height: 100%;
+}
+.page-title {
+  margin-bottom: 80px;
+}
+
+.accommodation-container {
+  position: relative;
+  margin: 0 auto 590px auto;
+  width: $main-width;
+  max-width: $max-width;
+}
+
+.accommodation-top {
+  width: 100%;
+  height: 270px;
+  display: flex;
+}
+
+.accommodation-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.accommodation-img {
+  width: calc(50% - 5px);
+  height: 100%;
+  margin-right: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.accommodation-map {
+  width: calc(50% - 5px);
+  height: 100%;
+  margin-left: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.accommodation-details {
+  color: $white;
+  min-height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0 15px 0;
+}
+
+.accommodation-details-booking {
+  background-color: $main;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+  .btn {
+    width: calc(((100% / 4) - 8px));
+    height: 52px;
+    line-height: 52px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.accommodation-booking-column {
+  height: 120px;
+  width: 130px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.accommodation-booking-details {
+  height: 54px;
+  width: calc(((100% / 4) - 8px));
+  margin: 0 10px;
+}
+
+.accommodation-booking-price {
+  margin-left: auto;
+  margin-right: 10px;
+  text-align: right;
+
+  h2 {
+    font-size: 2.7em;
+  }
+}
+
+.accommodation-booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.accommodation-booking-form-bottom {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+}
+
+.accommodation-booking-input-icon {
+  height: 54px;
+  width: 54px;
+  position: relative;
+  background-color: $secondary;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    line {
+      stroke: $white;
+    }
+  }
+}
+
+.accommodation-booking-input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc((100% / 4) - 8px);
+  margin-right: 10px;
+
+  .form-overbox {
+    transform: translateY(calc(-100% - -2px));
+    left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  label {
+    font-family: $font-family;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    color: $white;
+  }
+
+  .form-input {
+    height: 52px;
+    width: calc(100% - 66px);
+  }
+}
+
+@media (max-width: $breakpoint-big-1) {
+  .accommodation-container {
+    width: $breakpoint-big-1-width;
+  }
+}
+
+@media (max-width: $breakpoint-big-2) {
+  .accommodation-container {
+    width: $breakpoint-big-2-width;
+  }
+}
+
+@media (max-width: 1270px) {
+  .accommodation-booking-input-group {
+    width: calc((100% / 2) - 8px);
+    margin-bottom: 10px;
+
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+  }
+
+  .accommodation-booking-form {
+    margin: 0;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .accommodation-top {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .accommodation-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    height: 50vw;
+  }
+
+  .accommodation-map {
+    margin-left: 0;
+    width: 100%;
+    height: 50vw;
+  }
+
+  .accommodation-booking-input-group {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .accommodation-booking-form-bottom {
+    flex-direction: column;
+  }
+
+  .mail,
+  .btn,
+  .accommodation-booking-details,
+  .accommodation-booking-price {
+    width: 100% !important;
+    margin: 0 0 10px 0;
+  }
+
+  .accommodation-booking-price {
+    text-align: center;
+  }
+}
+
+@media (max-width: $breakpoint-mobileL) {
+  .accommodation-details-booking {
+    padding: 40px 20px;
+  }
+}

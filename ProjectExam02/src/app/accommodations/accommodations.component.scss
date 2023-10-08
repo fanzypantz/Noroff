@@ -1,0 +1,309 @@
+@import '../../variables';
+
+.accommodations-container {
+  width: $main-width;
+  max-width: $max-width;
+  margin: 0 auto 590px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-accommodations {
+  position: absolute;
+  top: 100vh;
+  right: 0;
+
+  .bg-trapezoid {
+    width: 70vw;
+    height: 60vw;
+  }
+}
+
+.accommodations-card {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 30px;
+  display: flex;
+  color: $white;
+}
+
+.accommodations-img {
+  width: calc(30% - 5px);
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.accommodation-details {
+  background-color: $secondary;
+  width: calc(40% - 90px);
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.accommodation-title {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    overflow: hidden;
+    width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 2em;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.accommodation-rating svg {
+  margin-left: 2px;
+}
+
+.accommodation-text {
+  max-height: 43px;
+  overflow: hidden;
+  margin: 0;
+  font-weight: 100;
+}
+
+.accommodation-booking {
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  width: calc(30% - 5px);
+  background-color: $main;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.accommodation-booking-container {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accommodation-booking-details {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+}
+
+.accommodation-booking-details-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  p {
+    font-family: $font-family;
+    width: calc(100% - 24px);
+    text-align: center;
+    color: $main;
+    font-size: 0.75em;
+    background-color: $main-shade2;
+    margin: 0;
+    line-height: 22px;
+    padding: 2px 5px;
+  }
+
+  .square {
+    width: 22px;
+    margin-left: 2px;
+  }
+
+  &:last-of-type {
+    margin-top: 2px;
+  }
+}
+
+.accommodation-booking-price {
+  h2 {
+    margin: 0;
+    font-size: 2em;
+    color: $main-shade2;
+    text-decoration: underline;
+  }
+}
+
+.accommodation-booking-buttons {
+  .btn {
+    text-align: center;
+    line-height: 44px;
+    font-size: 0.9em;
+  }
+
+  .mail {
+    background-color: $main-shade2;
+    border-bottom: 2px solid $main-shade1;
+    color: $main;
+    height: 44px;
+
+    &:hover {
+      background-color: $secondary;
+      border-bottom: 2px solid $secondary-shade;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  * {
+    display: block;
+    height: 46px;
+    width: 47%;
+  }
+}
+
+.accommodation-pagination {
+  width: $main-width;
+  max-width: $max-width;
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-between;
+
+  .btn {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    height: 40px;
+    line-height: 40px;
+    width: 30%;
+  }
+}
+
+@media (max-width: $breakpoint-big-1) {
+  .accommodations-container,
+  .accommodation-pagination {
+    width: $breakpoint-big-1-width;
+  }
+}
+
+@media (max-width: $breakpoint-big-2) {
+  .accommodations-container,
+  .accommodation-pagination {
+    width: $breakpoint-big-2-width;
+  }
+}
+
+@media (max-width: 1270px) {
+  .accommodations-img {
+    width: calc(25% - 5px);
+  }
+
+  .accommodation-details {
+    width: calc(37% - 90px);
+  }
+
+  .accommodation-booking {
+    width: calc(38% - 5px);
+  }
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .big-title {
+    margin: 90px auto;
+  }
+
+  app-booking-search {
+    height: auto;
+    position: unset;
+    width: $breakpoint-big-2-width;
+    margin: 50px auto;
+    transform: unset;
+    background-color: transparent;
+  }
+
+  .accommodations-card {
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .accommodations-img {
+    width: 100%;
+    margin: 0;
+    height: 400px;
+  }
+
+  .accommodation-details {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    margin: 15px 0;
+  }
+
+  .accommodation-booking {
+    width: 100%;
+    margin: 0;
+    height: 200px;
+  }
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .accommodation-pagination {
+    .btn {
+      width: 48%;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .accommodations-img {
+    height: 80vw;
+  }
+
+  .accommodation-text {
+    max-height: unset;
+  }
+
+  .accommodation-details {
+    height: auto;
+  }
+
+  .accommodation-title {
+    flex-direction: column;
+  }
+
+  .accommodation-title h2 {
+    overflow: auto;
+    white-space: unset;
+    text-overflow: unset;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: $breakpoint-mobileL) {
+  .accommodation-booking {
+    padding: 30px;
+    height: auto;
+  }
+
+  .accommodation-booking-container {
+    flex-direction: column;
+    height: auto;
+
+    .btn {
+      margin: 5px auto;
+      width: 100%;
+    }
+  }
+
+  .accommodation-booking-details {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  .accommodation-booking-price {
+    margin: 5px auto;
+  }
+}

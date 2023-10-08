@@ -1,0 +1,151 @@
+/* Reusability Section */
+
+#header-reusability
+  background: url(../images/header02.jpg) no-repeat center center
+  background-size: cover
+
+#reflight-gallery
+  position: relative
+
+  .link-text
+    opacity: 0
+    text-align: center
+    transition: opacity 250ms ease-in-out
+
+  .card
+    width: 350px
+    height: 233px
+    position: absolute
+    transition: transform 250ms ease-in-out
+
+    .image
+      box-shadow: $box-shadow
+
+    &:hover
+      z-index: 100
+
+      .link-text
+        opacity: 1
+
+      .card-desc
+        opacity: 1
+
+    .card-desc
+      position: absolute
+      top: 110%
+      left: 0
+      opacity: 0
+      background-color: black
+      color: white
+      padding: 20px
+      transition: opacity 250ms ease-in-out
+
+      .title
+        text-transform: uppercase
+
+#reflight-01
+  z-index: 99
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+#reflight-02
+  z-index: 98
+  top: 51%
+  left: 42%
+
+#reflight-03
+  z-index: 97
+  top: 48%
+  left: 13%
+
+#reflight-04
+  z-index: 96
+  top: 28%
+  left: 9%
+
+#reflight-05
+  z-index: 96
+  top: 14%
+  left: 36%
+
+
+#reflight-06
+  z-index: 97
+  top: 24%
+  left: 54%
+
+#reflight-07
+  z-index: 97
+  top: 42%
+  left: 64%
+
+#cores
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: url(../images/header06.jpg) no-repeat center center
+  background-size: cover
+
+  .rocket-card
+    display: none
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  .rocket-card:hover
+    cursor: pointer
+
+  .falcon-cores
+    background-color: white
+    box-shadow: $box-shadow
+    width: 35%
+    margin: 20px auto
+    text-align: center
+
+  .cores-row
+    display: flex
+    justify-content: space-between
+    width: 35%
+    margin: 0 auto
+    height: 300px
+
+    .core-card
+      width: 200px
+      height: 300px
+      position: relative
+      box-shadow: $box-shadow
+
+      &:hover
+        cursor: pointer
+
+      .link-text
+        text-align: center
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: 50% 50%
+
+
+#first-landing
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .youtube
+    position: relative
+    width: 60%
+    height: 40%
+    box-shadow: $box-shadow
+
+    margin: 0 auto
+
+    .link-text
+      bottom: 3px
+
+    iframe
+      width: 100%
+      height: 100%

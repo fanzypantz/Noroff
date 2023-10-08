@@ -1,0 +1,66 @@
+<div class="big-title page-title">
+  <h1>{{ this.model }} - {{ this.mode }}</h1>
+  <div class="big-title-border"></div>
+</div>
+
+<div class="bg-parallelogram"></div>
+
+<div class="admin-menu">
+  <button
+    (click)="newDocument()"
+    *ngIf="mode === 'read'"
+    class="btn admin-create-btn"
+  >
+    New {{ model }}
+  </button>
+
+  <a
+    class="btn"
+    (click)="
+      pageTransition.navigate('/admin', {
+        queryParams: { model: 'establishments', mode: 'read' }
+      })
+    "
+    >Establishments</a
+  >
+  <a
+    class="btn"
+    (click)="
+      pageTransition.navigate('/admin', {
+        queryParams: { model: 'reservations', mode: 'read' }
+      })
+    "
+    >Reservations</a
+  >
+  <a
+    class="btn"
+    (click)="
+      pageTransition.navigate('/admin', {
+        queryParams: { model: 'messages', mode: 'read' }
+      })
+    "
+    >Messages</a
+  >
+  <a
+    class="btn"
+    (click)="
+      pageTransition.navigate('/admin', {
+        queryParams: { model: 'posts', mode: 'read' }
+      })
+    "
+    >Posts</a
+  >
+  <a
+    class="btn"
+    (click)="
+      pageTransition.navigate('/admin', {
+        queryParams: { model: 'users', mode: 'read' }
+      })
+    "
+    >Users</a
+  >
+</div>
+
+<app-read *ngIf="mode === 'read'" [model]="model"></app-read>
+
+<app-edit *ngIf="mode === 'edit'" [model]="model" [id]="id"></app-edit>

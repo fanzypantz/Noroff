@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript - MA03 - Question 1</title>
+
+        <style>
+            #form {
+                font-family: Helvetica;
+                border-radius: 2px;
+                width: 400px;
+                height: 400px;
+                margin: 100px auto;
+                background-color: darkslateblue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+
+            }
+
+            #form label,
+            #form input {
+                border-radius: 2px;
+                width: 80%;
+                display: block;
+                height: 20px;
+                padding: 5px;
+                border: none;
+            }
+
+            #form input {
+                margin: 5px 0;
+                color: black;
+            }
+
+            #form label {
+                padding: 5px 0;
+                width: calc(80% + 10px);
+            }
+
+            #form input[type=submit]  {
+                background-color: orange;
+                width: calc(80% + 10px);
+                margin-top: 20px;
+                height: 45px;
+                color: white;
+            }
+
+            #form input[type=submit]:hover {
+                color: gray;
+                background-color: white;
+            }
+        </style>
+    <body>
+
+    <!--Contact Form-->
+        <form id="form" action="#" method="post" onsubmit = "return(validate());">
+            <label for="name">First Name</label>
+            <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="John"
+                pattern="^[a-zA-Z ]+$"
+                title="First name should only contain uppercase or lowercase letters"
+            >
+            <label for="last-name">Last Name</label>
+            <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                placeholder="Smith"
+                pattern="^[a-zA-Z ]+$"
+                title="Last name should only contain uppercase or lowercase letters"
+            >
+            <label for="number">Telephone Number</label>
+            <input
+                id="number"
+                name="number"
+                type="text"
+                placeholder="88-88-88-88"
+                pattern="\d{8,12}"
+                title="Telephone number should only contain numbers and be between 8 and 12 digits"
+            >
+            <label for="email">Email Address</label>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="email@domain.com"
+                pattern="\S+@\S+\.\S+"
+                title='Email need to contain an "@" and end in a domain name'
+            >
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+</html>

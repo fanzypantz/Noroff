@@ -1,0 +1,137 @@
+body {
+    font-family: ff-enzo-web, sans-serif;
+    font-style: normal;
+    color: white;
+}
+
+h1 {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+a {
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 19pt;
+}
+
+a:hover {
+    color: #45606b;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-image {
+    position: fixed;
+    width: calc(100% - 200px);
+    min-height: 100vh;
+    bottom: 0;
+    left: 200px;
+    z-index: -10;
+    object-fit: cover;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nav-section {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    background-color: #17212a;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    box-shadow: 3px 0 5px 0 rgba(0,0,0,0.5);
+}
+
+.line svg {
+    width: 75px;
+    height: 8px;
+    margin: 5px auto;
+}
+
+.name-container svg {
+    width: 140px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 25pt;
+    margin: 10px;
+    text-transform: capitalize;
+}
+
+.social-icons img{
+    width: 35px;
+    fill: white;
+}
+
+.social-icons svg {
+    margin: 10px 5px;
+    fill: white;
+    display: inline-block;
+}
+
+.nav .social{
+    height: 10%;
+}
+
+.social-icons{
+    display: block;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top-bar {
+    top: 0;
+}
+
+.bottom-bar,
+.top-bar {
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    background: linear-gradient(to right, rgba(23,33,42,1) 0%,rgba(23,33,42,0.99) 1%,rgba(23,33,42,0) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

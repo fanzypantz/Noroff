@@ -1,0 +1,174 @@
+/* Index Section */
+
+#header-index
+  background: url(../images/header07.jpg) no-repeat center center
+  background-size: cover
+
+#hero01
+  background: url(../images/hero01.jpg) no-repeat center center
+  background-size: cover
+
+#hero02
+  background: url(../images/hero02.jpg) no-repeat center center
+  background-size: cover
+
+#hero03
+  background: url(../images/hero03.jpg) no-repeat center center
+  background-size: cover
+
+
+.history
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  h2
+    line-height: 38px
+
+  .text
+    font-size: 1.4em
+    line-height: 28px
+    margin: 20px 0
+
+  .reflight
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-top: 40px
+
+    svg
+      width: 64%
+      height: 10px
+
+      stroke: black
+      stroke-width: 5px
+
+    h3
+      font-size: 2em
+      margin: 0
+      width: 18%
+
+      &:last-of-type
+        text-align: right
+
+  #history
+    margin-left: 150px
+    width: 145px
+    border-right: 5px solid black
+
+    &:after
+      content: "story"
+      color: $spaceX
+
+  .hangar
+    position: relative
+    height: 260px
+    overflow: hidden
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: 100% 50%
+      transition: transform 250ms ease
+      
+      &:hover
+        transform: scale(1.2)
+
+    .link-text
+      opacity: 0
+      transition: opacity 250ms ease
+      
+  .hangar:hover .link-text
+    opacity: 1
+
+
+  h2
+    margin: 0
+    font-size: 3em
+    font-weight: 300
+
+
+#index-cta
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  #dragon-space
+    overflow: hidden
+    position: relative
+    width: 100%
+    height: 40%
+
+  #two-row-dragon
+    display: flex
+    width: 100%
+    height: 40%
+    justify-content: space-between
+    align-items: center
+
+    #landing, #core-hangar
+      overflow: hidden
+      position: relative
+      height: 100%
+      width: 50%
+      margin-top: 20px
+
+    #landing
+      margin-right: 10px
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: 100% 50%
+    transition: transform 250ms ease
+
+    &:hover
+      transform: scale(1.2)
+
+
+#business
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .column
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 700px
+    width: 22%
+    min-width: 248px
+    margin: 50px
+
+    #dreams, #jobs
+      border-bottom: 5px solid black
+
+    img
+      height: 50%
+      width: 100%
+      object-fit: cover
+
+    .career-button
+      width: 100%
+      height: 50px
+      background-color: black
+      color: white
+      text-align: center
+      line-height: 50px
+      font-size: 2em
+      margin-top: auto
+
+      &:hover
+        background-color: $bg
+
+    h1
+      margin: 0
+      font-size: 3em
+      word-wrap: break-spaces
+      font-family: letter-gothic-std, monospace
+      font-weight: 600
+

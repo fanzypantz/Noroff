@@ -1,0 +1,236 @@
+@import '../../../variables';
+
+.search-form {
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+
+.search-form .btn {
+  width: calc(75% / 4);
+  height: 60px;
+  border-left: 2px solid $main;
+}
+
+.search-icon {
+  width: 60px;
+  height: 60px;
+  background-color: $main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    stroke: $white;
+
+    .calendar02 {
+      fill: $white;
+    }
+  }
+}
+
+.search-form-group {
+  position: relative;
+  display: flex;
+  width: calc(75% / 4);
+
+  &:hover .form-overbox {
+    opacity: 1;
+  }
+}
+
+app-booking-details {
+  width: calc(75% / 4);
+}
+
+.form-area {
+  width: 25%;
+}
+
+.search-dropdown-container {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% + 10px));
+  left: 60px;
+  width: calc(100% - 60px);
+
+  label {
+    padding-left: 10px;
+    background-color: $main-shade2;
+    border-bottom: 2px solid $main;
+    color: $main;
+    display: block;
+    width: calc(100% - 10px);
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 2px;
+  }
+
+  input[type='number'] {
+    color: $main;
+    padding-left: 10px;
+    background-color: $main-shade2;
+    width: calc(100% - 10px);
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid $main-shade1;
+    margin-bottom: 2px;
+  }
+}
+
+.form-date::-webkit-inner-spin-button,
+.form-date::-webkit-outer-spin-button,
+.form-date::-webkit-clear-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-date::-webkit-calendar-picker-indicator {
+  color: $main;
+
+  &:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+#check-in {
+  //text-transform: uppercase;
+  border-right: 2px solid $main;
+}
+
+#check-out {
+  //text-transform: uppercase;
+}
+
+.search-form-details {
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.search-details {
+  width: calc(100% - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+
+  p,
+  h4 {
+    color: $main;
+    margin: 0 0 0 20px;
+  }
+
+  p {
+    line-height: 12px;
+    font-size: 0.9em;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: $breakpoint-big-2) {
+  .search-form-group,
+  app-booking-details {
+    width: calc(75% / 3);
+  }
+
+  .form-area {
+    width: 25%;
+  }
+
+  .search-form-details {
+    width: 100%;
+  }
+
+  .search-form .btn {
+    position: absolute;
+    left: 50%;
+    bottom: calc(-100% - 20px);
+    transform: translateX(-50%);
+    border-left: none;
+    min-width: 205px;
+  }
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .search-form {
+    height: auto;
+
+    flex-wrap: wrap;
+
+    .btn {
+      position: unset;
+      transform: unset;
+      margin: 0 auto;
+    }
+  }
+
+  .search-form-group,
+  app-booking-details {
+    width: calc(50% - 10px);
+    height: 60px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+
+    &:nth-of-type(2) {
+      margin-right: 0;
+
+      .form-input {
+        border-right: none !important;
+      }
+    }
+  }
+
+  app-booking-details {
+    margin-right: 0;
+  }
+
+  .search-form-group:nth-of-type(3) {
+    flex-direction: row-reverse;
+  }
+
+  .search-form-details {
+    width: 100%;
+  }
+
+  .search-details {
+    background-color: $main-shade2;
+  }
+
+  .form-overbox-right {
+    right: unset;
+    left: 0;
+  }
+
+  .form-overbox {
+    left: 0;
+  }
+
+  .form-underbox {
+    z-index: 200;
+  }
+}
+
+@media (max-width: 590px) {
+  .search-form-group,
+  app-booking-details {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-form {
+    .btn {
+      width: 100%;
+    }
+  }
+}
