@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+h1 {
+  font-size: 2.25rem;
+}
+
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #000000;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #ff9002;
+  color: white;
+  font-weight: bold;
+}
+
+#logo {
+  color: white;
+}
+
+.nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-border-right {
+  border-right: 2px solid white;
+}
+
+.nav {
+  height: 75px;
+  background-color: #3d539f;
+}
+
+.footer-copyright {
+  margin-top: auto;
+  background-color: #b8c1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.branding {
+  font-size: 3rem;
+}
+
+.border {
+  padding: 20px;
+  margin: 10px;
+}
+
+.col-4 {
+  max-width: calc((100% / 3) - 20px);
+}
+
+/*# sourceMappingURL=base.css.map */

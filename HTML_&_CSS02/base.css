@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Quicksand-Regular";
+    src: url("Quicksand-Regular.ttf");
+}
+
+html {
+    font-family: "Coolvetica rg", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+img {
+    width: 50%;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    font-size: 1.5rem;
+}
+
+blockquote p {
+    display: inline;
+}
+
+.container {
+    margin: 0 auto 50px auto;
+    width: 50%;
+}
+
+.header-container {
+    width: 70%;
+
+    margin: 50px auto 0 auto;
+}
+
+.header-image {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.sub-image {
+    font-size: 1.2em;
+    line-height: 1.3rem;
+}
+
+#img-left {
+    float: left;
+    margin-right: 10px;
+	max-width: 350px;
+}
+
+#img-right {
+    float: right;
+    margin-left: 10px;
+	max-width: 350px;
+}

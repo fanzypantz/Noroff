@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.active {
+    color: #801f2f;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.47);
+}
+
+header {
+    background: url(../images/header.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo, header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+header .logo h1 {
+    font-family: 'Italianno', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.47);
+}
+
+header .logo {
+    margin-left: 100px;
+}
+
+header .nav {
+    margin-right: 100px;
+}
+
+header a {
+    margin: 0 20px;
+    font-size: 1.8em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.47);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: bisque;
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    height: 140px;
+    width: 25%;
+}
+
+footer .links a:first-child {
+    text-decoration: underline;
+}
+
+footer a {
+    color: gray;
+}
+
+.slogan {
+    height: 50px;
+    background-color: bisque;
+}
+
+.slogan h2 {
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: gray;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*background-color: bisque;*/
+    height: 65%;
+    width: 25%;
+    margin: 0 10px;
+}
+
+.roast-image {
+    width: 40%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.info .feature-heading {
+    text-align: center;
+    width: 100%;
+    font-size: 1.6em;
+    line-height: 50px;
+    color: #801f2f;
+    margin-bottom: 50px;
+    border-bottom: 2px solid gray;
+    background-color: bisque;
+}
+
+.info .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .text p {
+    width: 80%;
+    margin: 10px;
+}
+
+.gallery .feature {
+    position: relative;
+}
+
+.gallery .text-box {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.51);
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .text-box p {
+    margin: 10px auto;
+    max-width: 80%;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.47);
+}
+
+.gallery .text-box h3 {
+    color: #801f2f;
+    font-size: 2em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.47);
+}
+
+.gallery .gallery-heading {
+    text-align: center;
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.47);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.gallery .bg {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.about {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about p {
+    margin: 20px 0;
+    max-width: 45%;
+    line-height: 25px;
+}
+
+.about h2 {
+    font-size: 3em;
+    color: #801f2f;
+}
+
+.map {
+    width: 100%;
+    height: 90%;
+}
+
+.address {
+    margin: 10px 0;
+    width: 100%;
+    background-color: bisque;
+    line-height: 40px;
+    text-align: center;
+    color: #801f2f;
+}
+
+.contact .feature {
+    width: 35%;
+}
+
+.contact-form {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form input, .contact-form textarea {
+    color: black;
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid bisque;
+    width: 100%;
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.contact-form textarea {
+    height: 200px;
+}
+
+.contact-form input[type=button]:hover {
+    cursor: pointer;
+    border: 2px solid gray;
+}
+
+.contact-form textarea {
+    resize:vertical;
+    max-height: 200px;
+    min-height: 40px;
+}
+
+
+.contact-info h2 {
+    text-align: left;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#menu {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 115px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 100;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+.action .feature {
+    background-color: bisque;
+    border-bottom: 2px solid gray;
+    justify-content: space-around;
+    color: gray;
+
+}
+
+.action .feature p {
+    margin: 20px 0;
+    width: 80%;
+}
+
+.action .action-heading {
+    height: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.action .action-heading h2 {
+    font-size: 1.5em;
+    color: #801f2f;
+}
+
+.action .icon {
+    width: 40px;
+    fill: #801f2f;
+}
+
+.action .button {
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #801f2f;
+}
+
+.action .button:hover {
+    background-color: white;
+    color: gray;
+}
+
+@media only screen and (max-width: 1024px)  {
+
+    .info .text{
+        flex-direction: column;
+    }
+
+    .info .text p {
+        width: 100%;
+    }
+
+    .info .feature-heading {
+        font-size: 1.3em;
+    }
+
+    .roast-image {
+        width: 60%;
+    }
+
+    header a {
+        margin: 0 10px;
+    }
+
+    header .nav {
+        margin-right: 50px;
+    }
+
+    header .logo {
+        margin-left: 50px;
+    }
+
+    header .logo h1 {
+        font-size: 3em;
+    }
+
+    .slogan h2 {
+        font-size: 0.9em;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px)  {
+
+    #menu {
+        display: block !important;
+    }
+
+    header {
+        flex-direction: column;
+        height: calc(100vh - 100px) !important;
+    }
+
+    header a {
+        margin: 0 5px;
+    }
+
+
+
+    header .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        height: 700px;
+        width: 100%;
+        display: none;
+    }
+
+    header .nav .nav-item {
+        width: 100%;
+        background-color: bisque;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        margin: 10px 0;
+        white-space: nowrap;
+        text-shadow: none;
+        color: gray;
+    }
+
+    header .nav .nav-item.active {
+        color: #801f2f;
+    }
+
+    header .logo {
+        text-align: center;
+        margin: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 4em;
+    }
+
+    .slogan {
+        position: relative;
+        height: 100px;
+    }
+
+    .slogan h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 40px;
+        padding: 10px 0;
+    }
+
+    .info {
+        padding: 20px 0;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .info .feature-heading {
+        line-height: 50px;
+        width: 100%;
+    }
+
+    .feature {
+        margin: 20px auto;
+        width: 90%;
+        min-height: 400px;
+        overflow: hidden;
+    }
+
+    .contact .feature {
+        width: 90%;
+    }
+
+    .gallery .bg {
+        width: auto;
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .about p {
+        max-width: 70%;
+    }
+
+    .map-feature {
+        height: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 425px)  {
+
+    header {
+        height: calc(100vh - 150px) !important;
+    }
+
+    /*header .logo{*/
+        /*margin-top: 50px;*/
+        /*flex-direction: column;*/
+        /*justify-content: flex-start;*/
+    /*}*/
+
+    footer {
+        height: 600px;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    footer .links {
+        width: 90%;
+    }
+
+    .slogan {
+        height: 150px;
+    }
+
+}
+

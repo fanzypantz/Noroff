@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Re-Cycle</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="routes.html">Routes</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="hero">
+                <h1>Re-Cycle for the environment</h1>
+                <p>Some little description about our company that makes it look like we care about the environment, like an inspirational quote</p>
+            </div>
+            <form class="search-form" action="#" method="post">
+                <div class="search">
+                    <input id="search" type="text" placeholder="Find a site to visit">
+                    <input id="search-submit" type="submit" value="Search">
+                </div>
+            </form>
+            <div class="trail">
+                <div class="trail-text">
+                    <p>Check out our most</p>
+                    <p>popular path!</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.39 211.98"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M34.9,4.59l5.22,21A362,362,0,0,1,50.87,115.2l-.23,40.72a3.41,3.41,0,0,0,4.87,3.1l26-12.27a1.67,1.67,0,0,1,2.13,2.4L46.27,209.43a4.32,4.32,0,0,1-7.34,0L.76,148.38A1.67,1.67,0,0,1,2.93,146l25.81,12.9a3.41,3.41,0,0,0,4.94-3l.41-35.47A362,362,0,0,0,23.36,28.59L18.4,8.7a5.39,5.39,0,0,1,3.93-6.53l6-1.51A5.4,5.4,0,0,1,34.9,4.59Z"/></g></g></svg>
+            </div>
+        </header>
+        <section class="map">
+            <div class="map-location">
+                <div class="description">
+                    <img src="images/location01.jpg" alt="" >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+
+                <div id="location01" class="location"></div>
+
+            </div>
+            <div class="map-location">
+                <div id="location02" class="location"></div>
+
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <img src="images/location02.jpg" alt="" >
+                </div>
+            </div>
+        </section>
+        <section class="mailing">
+            <h1>Join our newsletter</h1>
+            <form action="#" method="post">
+                <input type="email" placeholder="email">
+                <input type="submit" value="Sign up">
+            </form>
+        </section>
+        <section class="map">
+            <div class="map-location">
+                <div class="description">
+                    <img src="images/location03.jpg" alt="" >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+
+                <div id="location03" class="location"></div>
+
+            </div>
+            <div class="map-location">
+                <div id="location04" class="location"></div>
+
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <img src="images/location04.jpg" alt="" >
+                </div>
+            </div>
+        </section>
+        <footer>
+            <a href="#">Home</a>
+            <a href="routes.html">Routes</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </footer>
+
+        <script>
+            // Initialize and add the map
+            var map, map2, map3, map4;
+
+            function initMap() {
+                // The location of Uluru
+                var myOptions = {
+                    zoom: 14,
+                    center: new google.maps.LatLng(58.460908, 8.764985),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("location01"), myOptions);
+
+                map2 = new google.maps.Map(document.getElementById("location02"), myOptions);
+
+                map3 = new google.maps.Map(document.getElementById("location03"), myOptions);
+
+                map4 = new google.maps.Map(document.getElementById("location04"), myOptions);
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQXmD2R8443tmPDJOuxRUYmbQ9oDY9aq8&callback=initMap">
+        </script>
+    </body>
+</html>

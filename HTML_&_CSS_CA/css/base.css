@@ -1,0 +1,256 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    overflow: auto;
+}
+
+body {
+    font-family: pt-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    min-height: 100%;
+    color: #f3ad67;
+    background-color: #143033;
+}
+
+a {
+    text-decoration: none;
+    color: #f3ad67;
+}
+
+a:hover {
+    color: white;
+}
+
+header {
+    background: lightblue url("../images/hero_bg.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+header nav {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.trail {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.trail svg{
+    fill: white;
+    width: 50px;
+    filter: drop-shadow(0 0 15px black);
+}
+
+.trail-text {
+    transform: translate(-25px, -30px) rotate(-20deg);
+}
+
+.trail-text p {
+    margin: 0;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 0 0 15px black;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.56);
+}
+
+.hero h1 {
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 700;
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+
+.search-form {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #f3ad67;
+}
+
+.search {
+    display: flex;
+    margin: 0 auto;
+}
+
+#search {
+    width: 800px;
+    text-align: center;
+}
+
+.search input {
+    display: block;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+input[type=submit] {
+    width: 70px;
+    background-color: #f3ad67;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+}
+
+#search-submit {
+    width: 70px;
+}
+
+.map {
+    padding: 50px 0;
+    height: 600px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #285c62;
+}
+
+.description {
+    width: 50%;
+    background-color: #143033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f3ad67;
+}
+
+.map-location .description:first-of-type {
+    margin-right: 40px;
+}
+
+.map-location .description:last-of-type {
+    margin-left: 40px;
+}
+
+.description p {
+    margin: 20px;
+}
+
+.description img {
+    height: 180px;
+}
+
+.map-location {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location {
+    border: 2px solid #f3ad67;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.mailing {
+    width: 1200px;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailing input[type=email] {
+    width: 300px;
+}
+
+
+
+.mailing input[type=email],
+.mailing input[type=submit]{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    height: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: #285c62;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
