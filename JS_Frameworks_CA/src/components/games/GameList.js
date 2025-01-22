@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import LoadingEllipsis from "../LoadingEllipsis";
 import GameContext from "../../context/GameContext";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function GameList(props) {
   const context = useContext(GameContext);
-  const history = useHistory();
+  const history = useNavigate();
 
   const [games, setGames] = useState(props.games);
   const [showDetails, setShowDetails] = useState(false);
@@ -31,7 +31,7 @@ export function GameList(props) {
     }
   };
 
-  const checkError = e => {
+  const checkError = (e) => {
     // If this function is ever called just display the content that is being loaded regardless of loading state
     if (e) {
       console.log("error: ", e);
@@ -48,7 +48,7 @@ export function GameList(props) {
     }, 1000);
   };
 
-  const handleHover = id => {
+  const handleHover = (id) => {
     setCurrent(id);
     setShowDetails(true);
   };
@@ -63,11 +63,11 @@ export function GameList(props) {
     let oldFav = localStorage.getItem("favourites");
     if (oldFav !== null) {
       oldFav = JSON.parse(oldFav);
-      if (oldFav.filter(item => item.id === game.id).length) {
+      if (oldFav.filter((item) => item.id === game.id).length) {
         // Remove if existing
-        oldFav = oldFav.filter(item => item.id !== game.id);
+        oldFav = oldFav.filter((item) => item.id !== game.id);
         // Remove it from the state
-        setFavourites(favourites.filter(item => item.id !== game.id));
+        setFavourites(favourites.filter((item) => item.id !== game.id));
       } else {
         // Add if does not exist
         oldFav.push({
@@ -76,7 +76,7 @@ export function GameList(props) {
           released: game.released,
           name: game.name,
           rating: game.rating,
-          rating_top: game.rating_top
+          rating_top: game.rating_top,
         });
       }
       localStorage.setItem("favourites", JSON.stringify(oldFav));
@@ -93,7 +93,7 @@ export function GameList(props) {
         released: game.released,
         name: game.name,
         rating: game.rating,
-        rating_top: game.rating_top
+        rating_top: game.rating_top,
       });
       localStorage.setItem("favourites", JSON.stringify(newFav));
       setFavourites(getFavourites());
@@ -116,7 +116,7 @@ export function GameList(props) {
     }
   };
 
-  const checkIfFavourite = id => {
+  const checkIfFavourite = (id) => {
     if (favourites !== null && favourites !== undefined) {
       if (favourites.length > 0) {
         return !!favourites.includes(id);
@@ -137,10 +137,10 @@ export function GameList(props) {
         {games.map((value, index) => {
           return (
             <div
-              onClick={e =>
+              onClick={(e) =>
                 handleClick(e, {
                   pathname: "/game",
-                  search: `?id=${value.id}&page=${context.filters.page}&sortby=${context.filters.ordering}`
+                  search: `?id=${value.id}&page=${context.filters.page}&sortby=${context.filters.ordering}`,
                 })
               }
               onMouseEnter={() => handleHover(value.id)}
@@ -152,7 +152,7 @@ export function GameList(props) {
               }
             >
               <svg
-                onClick={e => handleFavourites(e, value)}
+                onClick={(e) => handleFavourites(e, value)}
                 className={
                   "library__star" +
                   (checkIfFavourite(value.id) ? " library__fav" : "")

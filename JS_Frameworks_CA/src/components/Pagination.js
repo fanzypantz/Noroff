@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import GameContext from "../context/GameContext";
 
-const Pagination = props => {
+const Pagination = (props) => {
   const context = useContext(GameContext);
-  const history = useHistory();
+  const history = useNavigate();
 
   const getDescendingName = () => {
     const switchContext = context.filters.ordering.startsWith("-")
@@ -59,19 +59,19 @@ const Pagination = props => {
     }
   };
 
-  const handleSorting = e => {
+  const handleSorting = (e) => {
     context.setNewFilter(
       "ordering",
       context.filters.ordering.startsWith("-")
         ? "-" + e.target.value
-        : e.target.value
+        : e.target.value,
     );
     context.setNewFilter("page", 1);
     history.push(`/1?sortby=${context.filters.ordering}`);
     props.fetchPage();
   };
 
-  const handleDirection = e => {
+  const handleDirection = (e) => {
     const newOrder = context.filters.ordering.startsWith("-")
       ? context.filters.ordering.substr(1)
       : `-${context.filters.ordering}`;

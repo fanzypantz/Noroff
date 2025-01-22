@@ -6,7 +6,7 @@ import GameList from "./games/GameList";
 import "../css/Library.scss";
 import axios from "axios";
 
-const Library = props => {
+const Library = (props) => {
   const { page } = useParams();
   const context = useContext(GameContext);
   const params = new URLSearchParams(useLocation().search);
@@ -21,7 +21,7 @@ const Library = props => {
         : params.get("sortby");
       context.setNewFilter(
         "ordering",
-        params.get("direction") === "ascending" ? sorting : "-" + sorting
+        params.get("direction") === "ascending" ? sorting : "-" + sorting,
       );
     }
 
@@ -37,7 +37,7 @@ const Library = props => {
     // eslint-disable-next-line
   }, []);
 
-  const fetchPage = query => {
+  const fetchPage = (query) => {
     // The default page is 1, if it is not set by the library component.
     // This can be called from any component.
     // This url query can be expanded upon with plenty of features like ordering,
@@ -50,9 +50,20 @@ const Library = props => {
         }&ordering=${context.filters.ordering}&page_size=${
           context.filters.page_size
         }`;
-    axios.get(url).then(response => {
-      setGameData(response.data);
-    });
+
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + process.env.REACT_APP_RAWG_API_KEY,
+        },
+      })
+      .then((response) => {
+        console.log("response: ", response);
+        setGameData(response.data);
+      })
+      .catch((e) => {
+        console.log("error: ", e);
+      });
   };
 
   return (

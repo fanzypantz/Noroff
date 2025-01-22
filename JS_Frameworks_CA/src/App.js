@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 
 // Components
@@ -17,7 +17,7 @@ function App() {
   const [filters, setFilters] = useState({
     page: null,
     page_size: 25,
-    ordering: "-rating"
+    ordering: "-rating",
   });
 
   useEffect(() => {
@@ -37,29 +37,19 @@ function App() {
         loadingImages: loadingImages,
         setLoadingImages: setLoadingImages,
         filters: filters,
-        setNewFilter: setNewFilter
+        setNewFilter: setNewFilter,
       }}
     >
       <div className={"pageFade" + (pageFade ? " pageFade__anim" : "")} />
       <Router>
         <Menu />
-        <Switch>
-          <Route path={"/favourites"}>
-            <Favourites />
-          </Route>
-          <Route path={"/contact"}>
-            <Contact />
-          </Route>
-          <Route path={"/game"}>
-            <Game />
-          </Route>
-          <Route path={"/:page"}>
-            <Library />
-          </Route>
-          <Route exact path={"/"}>
-            <Library />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path={"/favourites"} element={<Favourites />} />
+          <Route path={"/contact"} element={<Contact />} />
+          <Route path={"/game"} element={<Game />} />
+          <Route path={"/:page"} element={<Library />} />
+          <Route exact path={"/"} element={<Library />} />
+        </Routes>
       </Router>
     </GameProvider>
   );

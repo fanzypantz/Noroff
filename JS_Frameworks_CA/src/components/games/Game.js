@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import GameContext from "../../context/GameContext";
 import Platforms from "./Platforms";
 import Genres from "./Genres";
@@ -9,7 +9,7 @@ import axios from "axios";
 const Game = ({ location }) => {
   const context = useContext(GameContext);
   const params = new URLSearchParams(useLocation().search);
-  const history = useHistory();
+  const history = useNavigate();
 
   // State
   const [game, setGame] = useState(null);
@@ -21,11 +21,17 @@ const Game = ({ location }) => {
     // eslint-disable-next-line
   }, []);
 
-  const fetchGame = id => {
+  const fetchGame = (id) => {
     let url = `https://api.rawg.io/api/games/${id}`;
-    axios.get(url).then(response => {
-      setGame(response.data);
-    });
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + process.env.REACT_APP_RAWG_API_KEY,
+        },
+      })
+      .then((response) => {
+        setGame(response.data);
+      });
   };
 
   const goBack = () => {
